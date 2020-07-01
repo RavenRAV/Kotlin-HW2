@@ -16,9 +16,10 @@ class MainActivity : AppCompatActivity() {
         addImage()
 
         imgView.loadImage(
-            "https://www.wallpaperup.com/uploads/wallpapers/2014/02/01/244212/24e483f8bc082d6b0f907a050956d627-700.jpg",
+            "http://developer.alexanderklimov.ru/android/images/android_cat.jpg",
             this
         )
+
         submitBtn.setOnClickListener {
             if (et.text.trim().isNotEmpty()) {
                 images.add(et.text.toString())
@@ -31,7 +32,6 @@ class MainActivity : AppCompatActivity() {
             imgView.loadImage(images.random(), this)
         }
     }
-
 
     private fun addImage() {
         images.add("https://www.wallpaperup.com/uploads/wallpapers/2014/02/01/244212/24e483f8bc082d6b0f907a050956d627-700.jpg")
